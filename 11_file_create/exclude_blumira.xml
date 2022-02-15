@@ -1,0 +1,13 @@
+<Sysmon schemaversion="4.30">
+<EventFiltering>
+  <RuleGroup name="" groupRelation="or">
+    		<FileCreate onmatch="exclude">
+			<Image condition="is">C:\Program Files\Sophos\Live Query\SophosOsquery.exe</Image>
+		</FileCreate>
+                <FileCreate onmatch="exclude">
+                	<Image condition="contains">AteraAgent</Image>
+                </FileCreate>
+
+  </RuleGroup>
+</EventFiltering>
+</Sysmon>

@@ -1,0 +1,17 @@
+<Sysmon schemaversion="4.30">
+  <EventFiltering>
+    <RuleGroup name="" groupRelation="or">
+      <ImageLoad onmatch="exclude">
+        <Rule groupRelation="and">
+          <Image condition="contains">AteraAgent</Image>
+        </Rule>
+        <Rule groupRelation="and">
+          <Image condition="end with">Teams.exe</Image>
+        </Rule>
+        <Rule groupRelation="and">
+          <Image condition="end with">SophosUpdate.exe</Image>
+        </Rule>
+      </ImageLoad>
+    </RuleGroup>
+  </EventFiltering>
+</Sysmon>

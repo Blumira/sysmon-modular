@@ -1,0 +1,11 @@
+<Sysmon schemaversion="4.60">
+  <EventFiltering>
+    <RuleGroup name="" groupRelation="or">
+      <ProcessAccess onmatch="exclude">
+	<SourceImage condition="contains">Microsoft VS Code</SourceImage>
+	<SourceImage condition="contains">AteraAgent</SourceImage>
+        <SourceImage condition="contains">SophosOsquery.exe</SourceImage>
+      </ProcessAccess>
+    </RuleGroup>
+  </EventFiltering>
+</Sysmon>
